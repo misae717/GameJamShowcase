@@ -83,7 +83,7 @@ export function ProjectsSection() {
               transition={{ duration: 0.5, delay: 0.5 }}
               className="inline-flex gap-2 items-center justify-center rounded-full border border-primary/10 bg-primary/5 px-4 py-2 text-sm font-medium text-primary hover:bg-primary/10 hover:border-primary/20 transition-all duration-300 hover:scale-105 cursor-pointer group"
             >
-              <span>Show more projects coming soon</span>
+              <span>More projects coming soon</span>
               <div className="h-4 w-4 rounded-full bg-primary/10 flex items-center justify-center">
                 <span className="text-[8px] font-semibold group-hover:scale-110 transition-transform duration-300">+</span>
               </div>
