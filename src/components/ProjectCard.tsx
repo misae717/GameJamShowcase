@@ -36,7 +36,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <>
       <Card className="overflow-hidden border-primary/10 dark:border-purple-500/30 shadow-md transition-all duration-300 hover:shadow-xl dark:hover:shadow-purple-800/30 bg-card/90 dark:bg-card/90 light:bg-card backdrop-blur-sm group w-full h-full flex flex-col">
-        <div className="relative aspect-[16/9] overflow-hidden">
+        <div className="relative aspect-[16/9] overflow-hidden bg-gradient-to-br from-background via-background/95 to-primary/5">
           {/* Gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/5 to-background/80 dark:to-background/80 light:to-background/90 z-10 group-hover:opacity-90 transition-opacity" />
           
@@ -47,7 +47,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             src={project.image || "https://placehold.co/1600x900/3b82f6/ffffff?text=Game+Project"}
             alt={project.title}
             fill
-            className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+            className="object-contain transition-transform duration-700 ease-out group-hover:scale-105"
           />
           
           <div className="absolute top-3 left-3 z-20">
