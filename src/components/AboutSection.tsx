@@ -155,8 +155,8 @@ export function AboutSection() {
                   </div>
 
                   <Button variant="default" className="w-full mt-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white shadow-md group" asChild>
-                    <a href="#projects">
-                      <span className="mr-2">Register for Game Jam</span>
+                    <a href="https://forms.gle/ytL8UmMjnK7RjtuC7" target="_blank" rel="noopener noreferrer">
+                      <span className="mr-2">Register Game Proposal</span>
                       <ArrowRight className="h-4 w-4 inline-block group-hover:translate-x-1 transition-transform" />
                     </a>
                   </Button>
