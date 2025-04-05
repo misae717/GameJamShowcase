@@ -6,6 +6,7 @@ import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import { Menu } from "lucide-react";
 import { useState } from "react";
 import Image from "next/image";
+import { getImageUrl } from "@/lib/utils";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,7 +27,7 @@ export function Header() {
             <Link href="/" className="flex items-center gap-3 group">
               <div className="h-9 w-9 rounded-full overflow-hidden flex items-center justify-center shadow-sm relative after:absolute after:inset-0 after:rounded-full after:shadow-md after:opacity-0 after:transition-opacity group-hover:after:opacity-100">
                 <Image
-                  src={`${basePath}/Logos/GDCLogo.png`}
+                  src={getImageUrl("/Logos/GDCLogo.png")}
                   alt="Game Development Club Logo"
                   width={36}
                   height={36}
