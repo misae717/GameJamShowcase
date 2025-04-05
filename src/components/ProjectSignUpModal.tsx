@@ -188,13 +188,14 @@ export function ProjectSignUpModal({ project, isOpen, onClose }: ProjectSignUpMo
                 
                 {/* Club logo */}
                 <div className="absolute top-6 right-20 z-40 bg-background/80 rounded-full p-1 backdrop-blur-sm shadow-md dark:shadow-primary/20 dark:bg-background/60">
-                  <div className="relative h-12 w-12 rounded-full overflow-hidden">
+                  <div className="relative h-12 w-12 rounded-full flex items-center justify-center bg-background/60 backdrop-blur-sm border border-primary/20">
                     <Image
                       src={getImageUrl("/Logos/GDCLogo.png")}
                       alt="Game Development Club Logo"
-                      width={40}
-                      height={40}
+                      width={32}
+                      height={32}
                       className="object-contain"
+                      style={{ maxWidth: '100%', maxHeight: '100%' }}
                     />
                   </div>
                 </div>
