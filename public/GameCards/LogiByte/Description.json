@@ -1,0 +1,13 @@
+{
+    "Game Title": "LogiByte",
+    "Game Engine": "Unity",
+    "Game Type": "2D",
+    "Genre": "2D Puzzle / Simulation",
+    "Short Description": "imagine a game about digital logic (EE210) but it was so user-friendly that even business students could solve them and make them feel like engineers\n\n- Goal is to replicate a given string of binary output through limited friendly logic gates\n- Each level has a CPU which clocks a \"1\" every second (1 Hz) and can be paused\n- Puzzle gets harder and new mechanics/gates each level\n\nIntroducing Quantum Bits (Qubits):\n- Act as a volatile bit between 0 & 1\n- Must hover a magnifying glass (like an observer) to keep it stable at either 0 or 1\n- Releases randomly from CPU and must track it with the magnifier until it stabilizes at one of the gates to receive desired output\n\nArt:\n- Something similar to the referenced game\n- Electronic and circuit vibes\n- retro & electric music",
+    "Inspiration / References": "https://store.steampowered.com/app/2180700/ABIDOS/",
+    "Team Size / Members": "i feel like i could lock in and do it but it definitely needs a couple of good artists and designers to make it a vibe",
+    "Desired Roles": "Programmers, Artists, Game Designers",
+    "Projected Difficulty": "Advanced",
+    "Mentor": "Ziyad Elrougi"
+  }
+  
