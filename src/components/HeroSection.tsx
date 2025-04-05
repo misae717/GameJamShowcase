@@ -101,11 +101,11 @@ export function HeroSection() {
               </li>
               <li className="flex justify-between pb-3 border-b border-primary/5 group-hover:border-primary/10 transition-colors duration-300">
                 <span className="font-medium">Game Jam Start:</span>
-                <span className="font-bold text-purple-500 group-hover:text-blue-500 transition-colors duration-300">April 20, 2025</span>
+                <span className="font-bold text-purple-500 group-hover:text-blue-500 transition-colors duration-300">April 6, 2025</span>
               </li>
               <li className="flex justify-between">
                 <span className="font-medium">Project Submission:</span>
-                <span className="font-bold text-blue-500 group-hover:text-primary transition-colors duration-300">April 25, 2025</span>
+                <span className="font-bold text-blue-500 group-hover:text-primary transition-colors duration-300">April 26, 2025</span>
               </li>
             </ul>
           </motion.div>
