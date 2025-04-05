@@ -19,6 +19,26 @@ interface ProjectSignUpModalProps {
 export function ProjectSignUpModal({ project, isOpen, onClose }: ProjectSignUpModalProps) {
   const [isMounted, setIsMounted] = useState(false);
 
+  // Function to get title gradient based on game ID
+  const getTitleGradient = () => {
+    switch(project.id) {
+      case "highrise": 
+        return "from-purple-500 to-pink-500";
+      case "vesscura": 
+        return "from-red-600 to-rose-500";
+      case "monkeyflow": 
+        return "from-amber-400 to-green-400";
+      case "logibyte": 
+        return "from-blue-500 to-cyan-400";
+      case "shrine": 
+        return "from-pink-300 to-green-300";
+      case "memoriesofthesand": 
+        return "from-amber-200 to-yellow-300";
+      default: 
+        return "from-primary via-purple-500 to-blue-500";
+    }
+  };
+
   // Check if we're in the browser
   useEffect(() => {
     setIsMounted(true);
@@ -218,7 +238,7 @@ export function ProjectSignUpModal({ project, isOpen, onClose }: ProjectSignUpMo
                   >
                     {project.category}
                   </Badge>
-                  <h2 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-500 to-blue-500 dark:from-primary dark:via-purple-400 dark:to-blue-400 light:from-primary/90 light:via-purple-500/90 light:to-blue-500/90 light:text-primary">
+                  <h2 className={`text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r ${getTitleGradient()} dark:${getTitleGradient()} light:${getTitleGradient()}`}>
                     {project.title}
                   </h2>
                   <p className="mt-2 text-foreground/80 light:text-foreground/95">{project.description}</p>

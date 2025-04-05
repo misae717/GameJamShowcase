@@ -33,6 +33,26 @@ export function ProjectCard({ project }: ProjectCardProps) {
     }
   };
 
+  // Function to get title gradient based on game ID
+  const getTitleGradient = () => {
+    switch(project.id) {
+      case "highrise": 
+        return "bg-gradient-to-r from-purple-500 to-pink-500";
+      case "vesscura": 
+        return "bg-gradient-to-r from-red-600 to-rose-500";
+      case "monkeyflow": 
+        return "bg-gradient-to-r from-amber-400 to-green-400";
+      case "logibyte": 
+        return "bg-gradient-to-r from-blue-500 to-cyan-400";
+      case "shrine": 
+        return "bg-gradient-to-r from-pink-300 to-green-300";
+      case "memoriesofthesand": 
+        return "bg-gradient-to-r from-amber-200 to-yellow-300";
+      default: 
+        return "text-foreground dark:text-purple-100";
+    }
+  };
+
   return (
     <>
       <Card className="border-primary/10 dark:border-purple-500/30 shadow-md transition-all duration-300 hover:shadow-xl dark:hover:shadow-purple-800/30 bg-card/90 dark:bg-card/90 light:bg-card backdrop-blur-sm group w-full h-full flex flex-col p-0 overflow-hidden">
@@ -86,7 +106,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </div>
         
         <CardContent className="flex-grow p-5 mt-6 space-y-3">
-          <h3 className="font-bold text-xl leading-tight dark:text-purple-100 group-hover:text-primary transition-colors duration-300">
+          <h3 className={`font-bold text-xl leading-tight ${getTitleGradient()} bg-clip-text text-transparent group-hover:opacity-90 transition-all duration-300`}>
             {project.title}
           </h3>
           
