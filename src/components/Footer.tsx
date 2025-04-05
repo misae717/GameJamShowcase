@@ -30,10 +30,6 @@ export function Footer() {
               </div>
               <span className="font-bold text-lg transition-colors group-hover:text-primary">Alfaisal Game Jam</span>
             </div>
-            <p className="text-muted-foreground text-center md:text-left text-sm">
-              An event where participants create video games in a limited time frame.
-              Join us to showcase your creativity!
-            </p>
           </div>
           
           {/* Links */}
