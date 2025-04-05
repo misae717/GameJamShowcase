@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Sparkles, Calendar, ArrowDown } from "lucide-react";
 import Image from "next/image";
+import { getImageUrl } from "@/lib/utils";
 
 export function HeroSection() {
   return (
@@ -58,7 +59,7 @@ export function HeroSection() {
                   <span className="relative z-10 transition-colors duration-300 group-hover:text-white">View Projects</span>
                   <div className="relative z-10 h-4 w-4 transition-all duration-300 group-hover:rotate-12">
                     <Image
-                      src="/Logos/GDCLogo.png"
+                      src={getImageUrl("/Logos/GDCLogo.png")}
                       alt="Game Development Club Logo"
                       width={16}
                       height={16}

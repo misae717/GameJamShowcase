@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { GameProject } from "@/lib/types";
+import { getImageUrl } from "@/lib/utils";
 
 interface ProjectSignUpModalProps {
   project: GameProject;
@@ -189,9 +190,10 @@ export function ProjectSignUpModal({ project, isOpen, onClose }: ProjectSignUpMo
                 <div className="absolute top-6 right-20 z-40 bg-background/80 rounded-full p-1 backdrop-blur-sm shadow-md dark:shadow-primary/20 dark:bg-background/60">
                   <div className="relative h-12 w-12 rounded-full overflow-hidden">
                     <Image
-                      src="/Logos/GDCLogo.png"
+                      src={getImageUrl("/Logos/GDCLogo.png")}
                       alt="Game Development Club Logo"
-                      fill
+                      width={40}
+                      height={40}
                       className="object-contain"
                     />
                   </div>

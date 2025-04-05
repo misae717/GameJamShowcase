@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { MessageCircle, Github, Gamepad2 } from "lucide-react";
+import { getImageUrl } from "@/lib/utils";
 
 export function Footer() {
   return (
@@ -18,15 +19,14 @@ export function Footer() {
           {/* Logo and description */}
           <div className="flex flex-col items-center md:items-start max-w-xs group">
             <div className="flex items-center gap-3 mb-4">
-              <div className="h-10 w-10 rounded-md overflow-hidden relative">
+              <div className="h-10 w-10 rounded-full overflow-hidden border border-primary/10">
                 <Image
-                  src="/Logos/GDCLogo.png"
+                  src={getImageUrl("/Logos/GDCLogo.png")}
+                  alt="Game Development Club Logo"
                   width={40}
                   height={40}
-                  alt="Alfaisal Game Dev Logo"
-                  className="transition-transform duration-300 group-hover:rotate-12"
+                  className="object-contain"
                 />
-                <div className="absolute inset-0 opacity-0 bg-gradient-to-br from-primary/10 to-purple-500/10 transition-opacity group-hover:opacity-100"></div>
               </div>
               <span className="font-bold text-lg transition-colors group-hover:text-primary">Alfaisal Game Jam</span>
             </div>

@@ -9,6 +9,9 @@ import Image from "next/image";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  // Get basePath for GitHub Pages deployment
+  const basePath = process.env.NODE_ENV === 'production' ? '/GameJamShowcase' : '';
 
   return (
     <header className="border-b border-primary/10 bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full">
@@ -23,7 +26,7 @@ export function Header() {
             <Link href="/" className="flex items-center gap-3 group">
               <div className="h-9 w-9 rounded-full overflow-hidden flex items-center justify-center shadow-sm relative after:absolute after:inset-0 after:rounded-full after:shadow-md after:opacity-0 after:transition-opacity group-hover:after:opacity-100">
                 <Image
-                  src="/Logos/GDCLogo.png"
+                  src={`${basePath}/Logos/GDCLogo.png`}
                   alt="Game Development Club Logo"
                   width={36}
                   height={36}

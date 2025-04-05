@@ -13,6 +13,7 @@ import {
 import { GameProject } from "@/lib/types";
 import { ArrowUpRight, Users } from "lucide-react";
 import { ProjectSignUpModal } from "./ProjectSignUpModal";
+import { getImageUrl } from "@/lib/utils";
 
 interface ProjectCardProps {
   project: GameProject;
@@ -65,7 +66,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           <div className="absolute top-3 right-3 z-20 opacity-70 group-hover:opacity-100 transition-opacity">
             <div className="h-8 w-8 relative">
               <Image
-                src="/Logos/GDCLogo.png"
+                src={getImageUrl("/Logos/GDCLogo.png")}
                 alt="Game Development Club Logo"
                 fill
                 className="object-contain"

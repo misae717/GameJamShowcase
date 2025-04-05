@@ -1,7 +1,11 @@
 import { GameProject } from "../types";
 
 // Function to convert folder names to readable paths for images
-const getFolderPath = (folderName: string) => `/GameCards/${folderName}`;
+const getFolderPath = (folderName: string) => {
+  // Use the basePath from Next.js config when in production
+  const basePath = process.env.NODE_ENV === 'production' ? '/GameJamShowcase' : '';
+  return `${basePath}/GameCards/${folderName}`;
+};
 
 // Define the list of game projects from the actual data files in public/GameCards
 export const gameProjects: GameProject[] = [

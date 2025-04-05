@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { gameProjects } from "@/lib/data/projects";
 import { ProjectCard } from "@/components/ProjectCard";
 import Image from "next/image";
+import { getImageUrl } from "@/lib/utils";
 
 export function ProjectsSection() {
   return (
@@ -40,7 +41,7 @@ export function ProjectsSection() {
             <div className="inline-flex items-center justify-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-primary/10 to-purple-500/10 border border-primary/10 shadow-md hover:from-primary/20 hover:to-purple-500/20 hover:border-primary/20 hover:shadow-primary/10 transition-all duration-300 group">
               <div className="h-4 w-4 relative">
                 <Image
-                  src="/Logos/GDCLogo.png"
+                  src={getImageUrl("/Logos/GDCLogo.png")}
                   alt="Game Development Club Logo"
                   width={16}
                   height={16}
