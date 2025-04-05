@@ -37,28 +37,28 @@ export function ProjectCard({ project }: ProjectCardProps) {
     <>
       <Card className="overflow-hidden border-primary/10 dark:border-purple-500/30 shadow-md transition-all duration-300 hover:shadow-xl dark:hover:shadow-purple-800/30 bg-card/90 dark:bg-card/90 light:bg-card backdrop-blur-sm group w-full h-full flex flex-col p-0">
         <div className="relative w-full aspect-[16/9] overflow-hidden border-0 m-0 p-0">
-          {/* Gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/5 to-background/80 dark:to-background/80 light:to-background/90 z-10 group-hover:opacity-90 transition-opacity" />
+          {/* Gradient overlay - static */}
+          <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-transparent via-background/5 to-background/80 dark:to-background/80 light:to-background/90 z-10 group-hover:opacity-90 transition-opacity" />
           
           {/* Interactive overlay that appears on hover */}
-          <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-purple-500/20 opacity-0 group-hover:opacity-50 dark:group-hover:opacity-60 dark:from-primary/30 dark:to-blue-500/30 light:group-hover:opacity-30 transition-opacity z-10 mix-blend-overlay" />
+          <div className="absolute inset-0 w-full h-full bg-gradient-to-t from-primary/20 to-purple-500/20 opacity-0 group-hover:opacity-50 dark:group-hover:opacity-60 dark:from-primary/30 dark:to-blue-500/30 light:group-hover:opacity-30 transition-opacity z-20 mix-blend-overlay" />
           
           <Image
             src={project.image || "https://placehold.co/1600x900/3b82f6/ffffff?text=Game+Project"}
             alt={project.title}
             fill
-            className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+            className="object-cover transition-transform duration-700 ease-out group-hover:scale-110 z-0"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             quality={90}
           />
           
-          <div className="absolute top-3 left-3 z-20">
+          <div className="absolute top-3 left-3 z-30">
             <Badge variant="outline" className="bg-background/90 dark:bg-background/70 dark:border-primary/40 light:bg-background border-primary/20 text-foreground font-medium shadow-sm">
               {project.category}
             </Badge>
           </div>
           
-          <div className="absolute bottom-3 right-3 z-20">
+          <div className="absolute bottom-3 right-3 z-30">
             <Badge variant="outline" className="bg-background/90 dark:bg-background/70 dark:border-primary/40 light:bg-background border-primary/20 text-foreground shadow-sm flex items-center gap-1.5">
               <div className="h-2 w-2 rounded-full bg-current"></div>
               <span className={getDifficultyColor()}>{project.difficulty}</span>
@@ -66,7 +66,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           </div>
           
           {/* Club logo watermark */}
-          <div className="absolute top-3 right-3 z-20 opacity-70 group-hover:opacity-100 transition-opacity">
+          <div className="absolute top-3 right-3 z-30 opacity-70 group-hover:opacity-100 transition-opacity">
             <Image
               src={getImageUrl("/Logos/GDCLogo.png")}
               alt="Game Development Club Logo"
