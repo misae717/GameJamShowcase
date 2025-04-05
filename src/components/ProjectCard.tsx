@@ -26,6 +26,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
   const getDifficultyColor = () => {
     switch(project.difficulty) {
       case "Beginner": return "text-green-500";
+      case "Beginner / Intermediate": return "text-green-500";
       case "Intermediate": return "text-amber-500";
       case "Advanced": return "text-red-500";
       default: return "text-amber-500";
@@ -64,12 +65,14 @@ export function ProjectCard({ project }: ProjectCardProps) {
           
           {/* Club logo watermark */}
           <div className="absolute top-3 right-3 z-20 opacity-70 group-hover:opacity-100 transition-opacity">
-            <div className="h-8 w-8 relative">
+            <div className="h-8 w-8 relative flex items-center justify-center bg-background/60 backdrop-blur-sm rounded-full p-1 border border-primary/20">
               <Image
                 src={getImageUrl("/Logos/GDCLogo.png")}
                 alt="Game Development Club Logo"
-                fill
+                width={24}
+                height={24}
                 className="object-contain"
+                style={{ maxWidth: '100%', maxHeight: '100%' }}
               />
             </div>
           </div>
@@ -101,6 +104,10 @@ export function ProjectCard({ project }: ProjectCardProps) {
             <div className="flex items-center gap-1.5">
               <Users className="h-4 w-4" />
               <span>{project.teamSize || "4-6"}</span>
+            </div>
+            <div className="ml-auto flex items-center gap-1.5">
+              <span>ETA:</span>
+              <span className="font-medium text-primary dark:text-purple-300">{project.duration}</span>
             </div>
           </div>
         </CardContent>
