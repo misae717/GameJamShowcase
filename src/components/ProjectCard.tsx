@@ -65,13 +65,14 @@ export function ProjectCard({ project }: ProjectCardProps) {
           
           {/* Club logo watermark */}
           <div className="absolute top-3 right-3 z-20 opacity-70 group-hover:opacity-100 transition-opacity">
-            <div className="h-7 w-7 relative flex items-center justify-center bg-background/60 backdrop-blur-sm rounded-full overflow-hidden border border-primary/20">
+            <div className="h-8 w-8 relative flex items-center justify-center bg-background/60 backdrop-blur-sm rounded-full p-1 border border-primary/20">
               <Image
                 src={getImageUrl("/Logos/GDCLogo.png")}
                 alt="Game Development Club Logo"
-                width={20}
-                height={20}
+                width={24}
+                height={24}
                 className="object-contain"
+                style={{ maxWidth: '100%', maxHeight: '100%' }}
               />
             </div>
           </div>
