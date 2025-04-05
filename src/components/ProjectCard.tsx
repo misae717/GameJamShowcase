@@ -52,10 +52,10 @@ export function ProjectCard({ project }: ProjectCardProps) {
           </div>
 
           {/* Static gradient overlay */}
-          <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-transparent via-background/5 to-background/80 pointer-events-none" />
+          <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-transparent via-transparent to-background/70 pointer-events-none" />
           
           {/* Hover effect overlay - appears on hover */}
-          <div className="absolute inset-0 w-full h-full bg-gradient-to-t from-primary/20 to-purple-500/20 opacity-0 group-hover:opacity-50 dark:group-hover:opacity-60 dark:from-primary/30 dark:to-blue-500/30 light:group-hover:opacity-30 transition-opacity pointer-events-none" />
+          <div className="absolute inset-0 w-full h-full bg-gradient-to-t from-primary/10 to-purple-500/10 opacity-0 group-hover:opacity-40 dark:group-hover:opacity-40 dark:from-primary/20 dark:to-blue-500/20 light:group-hover:opacity-20 transition-opacity pointer-events-none" />
           
           {/* Category badge */}
           <div className="absolute top-3 left-3">
