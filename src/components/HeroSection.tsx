@@ -96,12 +96,12 @@ export function HeroSection() {
             </div>
             <ul className="mt-3 space-y-3 text-left">
               <li className="flex justify-between pb-3 border-b border-primary/5 group-hover:border-primary/10 transition-colors duration-300">
-                <span className="font-medium">Registration Deadline:</span>
-                <span className="font-bold text-primary group-hover:text-purple-500 transition-colors duration-300">April 15, 2025</span>
-              </li>
-              <li className="flex justify-between pb-3 border-b border-primary/5 group-hover:border-primary/10 transition-colors duration-300">
                 <span className="font-medium">Game Jam Start:</span>
                 <span className="font-bold text-purple-500 group-hover:text-blue-500 transition-colors duration-300">April 6, 2025</span>
+              </li>
+              <li className="flex justify-between pb-3 border-b border-primary/5 group-hover:border-primary/10 transition-colors duration-300">
+                <span className="font-medium">Registration Deadline:</span>
+                <span className="font-bold text-primary group-hover:text-purple-500 transition-colors duration-300">April 15, 2025</span>
               </li>
               <li className="flex justify-between">
                 <span className="font-medium">Project Submission:</span>
