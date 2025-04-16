@@ -147,7 +147,7 @@ export const gameProjects: GameProject[] = [
     inspiration: "Amnesia: The Dark Descent and Silent Hill 2",
     desiredRoles: "Programmers, Artists, Game Designers, Audio Editor",
     mentor: "Abdullah Ajam",
-    spreadsheetLink: ""
+    spreadsheetLink: "https://forms.gle/bgwyn1vCdG8tW2jw5"
   },
   {
     id: "fogoftheforsaken",
@@ -167,6 +167,6 @@ export const gameProjects: GameProject[] = [
     inspiration: "Uncharted, the last of us, Assassins Creed origins",
     desiredRoles: "Programmers, Artists",
     mentor: "Hamad Alganem",
-    spreadsheetLink: ""
+    spreadsheetLink: "https://forms.gle/nuNDjED8MDAEddcf7"
   }
 ]; 
